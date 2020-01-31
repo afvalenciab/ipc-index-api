@@ -10,7 +10,6 @@ passport.use(
 
     try {
       const user = await usersService.getUser({ email });
-
       if (!user) {
         return cb(boom.unauthorized(), false);
       }

@@ -34,10 +34,9 @@ const authApi = (app) => {
 
           return res.status(200).json({
             token,
-            user: {
-              id,
-              email
-            }
+            id,
+            email,
+            isAdmin
           });
         });
       } catch (error) {

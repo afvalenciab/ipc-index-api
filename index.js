@@ -7,7 +7,7 @@ const usersApi = require('./routes/usersApi');
 
 const app = express();
 app.use(cors('*'));
-app.use(helmet);
+app.use(helmet());
 app.use(express.json());
 authApi(app);
 usersApi(app);
