@@ -12,6 +12,16 @@ class UsersService {
     return user;
   }
 
+  async getUsersAll() {
+    const usersList = await this.mongoDB.getAll(this.collection, {});
+    return usersList || [];
+  }
+
+  async updateUser({ userId, user } = {}) {
+    const updatedUserId = await this.mongoDB.update(this.collection, userId, user);
+    return updatedUserId;
+  }
+
   async createUser({ user }) {
     const { email, password, isAdmin, wrongPass } = user;
     const hashedPassword = await bcrypt.hash(password, 10);
