@@ -12,8 +12,8 @@ class UsersService {
     return user;
   }
 
-  async getUsersAll() {
-    const usersList = await this.mongoDB.getAll(this.collection, {});
+  async getUsersAll(query = {}) {
+    const usersList = await this.mongoDB.getAll(this.collection, query);
     return usersList || [];
   }
 

@@ -9,5 +9,7 @@ const config = {
   dbHost: process.env.DB_HOST,
   dbName: process.env.DB_NAME,
   authJwtSecret: process.env.AUTH_JWT_SECRET,
+  sendgridApiKey: process.env.SENDGRID_API_KEY,
 };
+
 module.exports = { config };
