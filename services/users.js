@@ -22,6 +22,11 @@ class UsersService {
     return updatedUserId;
   }
 
+  async deleteUser({ userId }) {
+    const deletedUserId = await this.mongoDB.delete(this.collection, userId);
+    return deletedUserId;
+  }
+
   async createUser({ user }) {
     const { email, password, isAdmin, wrongPass } = user;
     const hashedPassword = await bcrypt.hash(password, 10);
