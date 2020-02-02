@@ -21,9 +21,9 @@ const sendEmail = async (user) => {
 
 const getAdministratorsEmails = async () => {
   const userAdmins = await usersService.getUsersAll({ isAdmin: true });
-  let emails = '';
+  let emails = [];
   userAdmins.map((item) => {
-    emails = emails.concat(`${item.email},`)
+    emails.push(item.email)
   });
   return emails;
 };
