@@ -1,4 +1,4 @@
-# IPC Index AI
+# IPC Index API
 This project manages the authentication and authorization for ipx-index-graph project
 
 # Documentation
