@@ -1,0 +1,14 @@
+{
+  "name": "ipcindex",
+  "version": 2,
+  "builds": [{ "src": "index.js", "use": "@now/node" }],
+  "routes": [{ "src": "/(.*)", "dest": "/index.js" }],
+  "env": {
+    "DB_USER": "@ipc-db-user",
+    "DB_PASSWORD": "@ipc-db-password",
+    "DB_HOST": "@ipc-db-host",
+    "DB_NAME": "@ipc-db-name",
+    "AUTH_JWT_SECRET": "@ipc-auth-jwt-secret",
+    "SENDGRID_API_KEY": "@ipc-sengrid-api-key"
+  }
+}
