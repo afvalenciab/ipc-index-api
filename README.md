@@ -1,2 +1,3 @@
-# ipc-index-api
-This project manages the authentication for ipx-index-graph project
+# IPC Index AI
+This project manages the authentication and authorization for ipx-index-graph project
+
